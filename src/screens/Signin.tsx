@@ -1,3 +1,5 @@
+import {Text} from "react-native";
+
 export const Signin = () => {
-  return <div>Signin</div>;
+  return <Text>Hello Signin</Text>;
 };
