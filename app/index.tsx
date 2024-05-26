@@ -1,15 +1,11 @@
 import {Stack} from "expo-router";
 
-import {Welcome} from "~/templates/Welcome";
+import {Home as HomeScreen} from "~/screens";
 
 const Home = () => (
   <>
-    <Stack.Screen
-      options={{
-        title: "My home",
-      }}
-    />
-    <Welcome />
+    <Stack.Screen options={{title: "My home"}} />
+    <HomeScreen />
   </>
 );
 
