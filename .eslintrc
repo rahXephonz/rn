@@ -5,10 +5,10 @@
     "prettier/prettier": [
       "error",
       {
-        "singleQuote": true,
-        "endOfLine": "auto"
-      }
-    ]
+        "singleQuote": false,
+        "endOfLine": "auto",
+      },
+    ],
   },
   "overrides": [
     // Configuration for TypeScript files
@@ -18,7 +18,7 @@
         "@typescript-eslint",
         "unused-imports",
         "tailwindcss",
-        "simple-import-sort"
+        "simple-import-sort",
       ],
       "extends": [
         "plugin:tailwindcss/recommended",
@@ -26,18 +26,18 @@
         "airbnb-typescript",
         "airbnb/hooks",
         "plugin:react/jsx-runtime",
-        "plugin:prettier/recommended"
+        "plugin:prettier/recommended",
       ],
       "parserOptions": {
-        "project": "./tsconfig.json"
+        "project": "./tsconfig.json",
       },
       "rules": {
         "prettier/prettier": [
           "error",
           {
-            "singleQuote": true,
-            "endOfLine": "auto"
-          }
+            "singleQuote": false,
+            "endOfLine": "auto",
+          },
         ],
         "import/extensions": [
           "error",
@@ -47,8 +47,8 @@
             "jsx": "never",
             "ts": "never",
             "tsx": "never",
-            "": "never"
-          }
+            "": "never",
+          },
         ], // Avoid missing file extension errors when using '@/' alias
         "react/function-component-definition": "off", // Disable Airbnb's specific function type
         "react/destructuring-assignment": "off", // Vscode doesn't support automatically destructuring, it's a pain to add a new variable
@@ -60,18 +60,15 @@
           "error",
           "ForInStatement",
           "LabeledStatement",
-          "WithStatement"
+          "WithStatement",
         ], // Overrides Airbnb configuration and enable no-restricted-syntax
         "import/prefer-default-export": "off", // Named export is easier to refactor automatically
         "simple-import-sort/imports": "error", // Import configuration for `eslint-plugin-simple-import-sort`
         "simple-import-sort/exports": "error", // Export configuration for `eslint-plugin-simple-import-sort`
         "@typescript-eslint/no-unused-vars": "off",
         "unused-imports/no-unused-imports": "error",
-        "unused-imports/no-unused-vars": [
-          "error",
-          { "argsIgnorePattern": "^_" }
-        ]
-      }
+        "unused-imports/no-unused-vars": ["error", {"argsIgnorePattern": "^_"}],
+      },
     },
     // Configuration for testing
     {
@@ -80,28 +77,25 @@
       "extends": [
         "plugin:jest/recommended",
         "plugin:jest-formatting/recommended",
-        "plugin:testing-library/react"
-      ]
+        "plugin:testing-library/react",
+      ],
     },
     // Configuration for e2e testing
     {
       "files": ["e2e/**/*.ts"],
       "plugins": ["jest", "jest-formatting", "detox"],
-      "extends": [
-        "plugin:jest/recommended",
-        "plugin:jest-formatting/recommended"
-      ],
+      "extends": ["plugin:jest/recommended", "plugin:jest-formatting/recommended"],
       "parserOptions": {
-        "project": "./e2e/tsconfig.json"
+        "project": "./e2e/tsconfig.json",
       },
       "rules": {
         "import/no-extraneous-dependencies": [
           "error",
           {
-            "devDependencies": true
-          }
-        ]
-      }
-    }
-  ]
+            "devDependencies": true,
+          },
+        ],
+      },
+    },
+  ],
 }
