@@ -34,6 +34,7 @@
     "expo-status-bar": "~1.6.0",
     "jotai": "^2.4.3",
     "nativewind": "^2.0.11",
+    "radash": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "7.48.2",
